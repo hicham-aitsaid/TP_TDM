@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
+                            /** ------------------------- Dev : AIT SAID HICHAM  ----------------------- **/
 
-/* ------------------------- Dev : AIT SAID HICHAM  ----------------------- */
 
 class detailsAdapter(private val list: List<detailsItem>, private val listener: OnItemClickListener) : RecyclerView.Adapter<detailsAdapter.Viewholder>() {
 

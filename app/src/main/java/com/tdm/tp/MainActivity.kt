@@ -9,6 +9,8 @@ import androidx.viewpager.widget.ViewPager
 import com.tdm.tp.listeCommandes.commandeItem
 import com.tdm.tp.listeCommandes.commandesAdapter
 
+                            /** ------------------------- Dev : AIT SAID HICHAM  ----------------------- **/
+
 class MainActivity : AppCompatActivity(),commandesAdapter.OnItemClickListener {
 
     private lateinit var modelList : ArrayList<Model>
@@ -48,9 +50,9 @@ class MainActivity : AppCompatActivity(),commandesAdapter.OnItemClickListener {
 
     private fun loadCards() {
         modelList = ArrayList()
-        modelList.add(Model("ez","ez",R.drawable.ic_camion_de_livraison))
-        modelList.add(Model("ez","ez",R.drawable.ic_camion_de_livraison))
-        modelList.add(Model("ez","ez",R.drawable.ic_camion_de_livraison))
+        modelList.add(Model("Nombre de livraisons du jour","0",R.drawable.ic_camion_de_livraison))
+        modelList.add(Model("Total des encaissements du jour","total",R.drawable.ic_piece_de_monnaie))
+        modelList.add(Model("Nombre de livraisons en retard","ez",R.drawable.ic_retard))
 
         adapter = Adapter(this,modelList)
         val vp = findViewById<ViewPager>(R.id.viewPager)

@@ -7,13 +7,15 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.zxing.integration.android.IntentIntegrator
+import com.google.zxing.integration.android.IntentResult
 import java.util.*
 import kotlin.collections.ArrayList
 
 
-class detailsCommande : AppCompatActivity(),detailsAdapter.OnItemClickListener {
-    private lateinit var adapter : detailsAdapter
+                        /** ------------------------- Dev : AIT SAID HICHAM  ----------------------- **/
 
+class detailsCommande : AppCompatActivity(),detailsAdapter.OnItemClickListener {
     private lateinit var detailsList : ArrayList<detailsItem>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,5 +48,30 @@ class detailsCommande : AppCompatActivity(),detailsAdapter.OnItemClickListener {
         )
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
         startActivity(intent)
+    }
+
+
+    fun scanCode(view : View){
+        IntentIntegrator(this@detailsCommande).initiateScan();
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        var result: IntentResult? = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+
+        if(result != null){
+
+            if(result.contents != null){
+                /*txtValue.text = result.contents*/
+            } else {
+                /*txtValue.text = "scan failed"*/
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+
+    fun validerCommande(view:View){
+
     }
 }

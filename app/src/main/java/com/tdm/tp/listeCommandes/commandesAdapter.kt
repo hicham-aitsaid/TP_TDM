@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tdm.tp.R
 
 
-/* ------------------------- Dev : AIT SAID HICHAM  ----------------------- */
+                        /** ------------------------- Dev : AIT SAID HICHAM  ----------------------- **/
 
 class commandesAdapter(private val list: List<commandeItem>, private val listener: OnItemClickListener) : RecyclerView.Adapter<commandesAdapter.Viewholder>() {
 

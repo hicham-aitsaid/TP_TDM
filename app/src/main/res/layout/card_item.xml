@@ -28,7 +28,7 @@
                 <ImageView
                     android:layout_margin="10dp"
                     android:id="@+id/liv"
-                    android:src="@drawable/ic_camion_de_livraison"
+                    android:src=""
                     android:layout_width="50dp"
                     android:layout_height="50dp"/>
 
@@ -38,7 +38,7 @@
                     android:layout_gravity="center"
                     android:textStyle="bold"
                     android:textColor="@color/primary"
-                    android:text="Nombre de Livraisons\n du Jour"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -54,7 +54,7 @@
                     android:id="@+id/num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="04"
+                    android:text=""
                     android:textColor="@color/primary"
                     android:textSize="30dp"
                     android:textStyle="bold" />
